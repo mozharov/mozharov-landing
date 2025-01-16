@@ -1,0 +1,704 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(19, 23, 34);
+    color: #FAFAFA;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+
+#squares-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #060606;
+    background-image:
+        linear-gradient(#333 1px, transparent 1px),
+        linear-gradient(90deg, #333 1px, transparent 1px);
+    background-size: 90px 90px;
+    animation: moveGrid 5s linear infinite;
+}
+
+@keyframes moveGrid {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 90px 90px;
+    }
+}
+
+#squares-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+            rgba(6, 6, 6, 0) 0%,
+            #060606 100%);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 60px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+p {
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.15rem;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 4rem 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(6, 6, 6, 0) 0%, rgba(6, 6, 6, 0.95) 10%, rgba(6, 6, 6, 0.95) 90%, rgba(6, 6, 6, 0) 100%);
+    z-index: -1;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-top: 5rem;
+}
+
+.social-link {
+    background-color: transparent;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 2px solid #fff;
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    background-color: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 8rem;
+}
+
+.project {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #fafafa;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.project a {
+    color: inherit;
+}
+
+.project-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.project-header:hover {
+    opacity: 0.8;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project h3 {
+    font-size: 1.4rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #BDBDBD;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.project-link svg {
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover svg {
+    transform: translate(2px, -2px);
+}
+
+.project-link span {
+    margin-right: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    padding: 1.5rem;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    background: none;
+}
+
+.header-title {
+    color: #FAFAFA;
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.header-title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center,
+            rgba(6, 6, 6, 0.95) 10%,
+            rgba(6, 6, 6, 0.8) 30%,
+            rgba(6, 6, 6, 0) 70%);
+    z-index: -1;
+}
+
+.header-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-title a:hover {
+    color: inherit;
+}
+
+.donations {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+}
+
+.donations-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.donation-methods {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.donation-method {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    min-width: 300px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.donation-method:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.donation-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.donation-icon {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+.donation-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.donation-address {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: monospace;
+    font-size: 0.9rem;
+    height: 4rem;
+}
+
+.donation-address span {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 300px;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right,
+            #fafafa 0%,
+            #fafafa 60%,
+            transparent 100%);
+    mask-image: linear-gradient(to right,
+            #fafafa 0%,
+            #fafafa 60%,
+            transparent 100%);
+}
+
+.donation-address span::after {
+    display: none;
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.copy-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.copy-btn.copied {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.qr-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.qr-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.qr-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background: rgba(30, 30, 30, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.close-modal:hover {
+    opacity: 1;
+}
+
+#qr-code {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+#qr-code canvas {
+    border-radius: 8px;
+    background: transparent;
+}
+
+.qr-address {
+    margin-top: 1rem;
+    font-family: monospace;
+    word-break: break-all;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    max-width: 256px;
+    margin: 1rem auto 0;
+}
+
+.ln-donate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: monospace;
+    transition: all 0.3s ease;
+    height: 4rem;
+}
+
+.ln-donate-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .donation-method {
+        width: 100%;
+    }
+
+    .modal-content {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero {
+        padding: 0 15px;
+    }
+
+    .content {
+        padding: 2rem 15px;
+    }
+
+    .social-links {
+        gap: 1rem;
+        padding-top: 3rem;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .donations-title {
+        font-size: 2rem;
+    }
+
+    .donations {
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .donation-address span {
+        max-width: 100%;
+    }
+
+    .project {
+        padding: 1.2rem;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .header-title {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .main-header {
+        padding: 1rem;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .donation-method {
+        min-width: unset;
+        padding: 1.5rem;
+    }
+
+    .donation-address {
+        font-size: 0.8rem;
+        padding: 0.8rem;
+        height: 3rem;
+    }
+
+    .donation-address span {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ln-donate-btn {
+        height: 3rem;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .project-header {
+        gap: 0.8rem;
+    }
+
+    .project-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .donation-header {
+        gap: 0.8rem;
+    }
+
+    .donation-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .donation-header h3 {
+        font-size: 1.2rem;
+    }
+}

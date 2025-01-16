@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MOZHAROV - Services for Sovereign Individuals. Discover innovative projects like ZapGram, the simplest Bitcoin wallet in Telegram. Send and receive sats instantly worldwide.">
+    <meta name="keywords"
+        content="MOZHAROV, Bitcoin wallet, Telegram bot, ZapGram, Lightning Network, cryptocurrency, sovereign individuals">
+    <meta name="author" content="MOZHAROV">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#131722">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mozharov.me/">
+    <meta property="og:title" content="MOZHAROV - Services for Sovereign Individuals">
+    <meta property="og:description"
+        content="Discover innovative projects like ZapGram, the simplest Bitcoin wallet in Telegram. Send and receive sats instantly worldwide.">
+    <meta property="og:image" content="https://mozharov.me/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="MOZHAROV logo">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mozharovlad">
+    <meta name="twitter:title" content="MOZHAROV - Services for Sovereign Individuals">
+    <meta name="twitter:description"
+        content="Discover innovative projects like ZapGram, the simplest Bitcoin wallet in Telegram. Send and receive sats instantly worldwide.">
+    <meta name="twitter:image" content="https://mozharov.me/assets/og-image.svg">
+    <meta name="twitter:image:alt" content="MOZHAROV logo">
+
+    <title>MOZHAROV - Services for Sovereign Individuals</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="qrcode.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "MOZHAROV",
+        "url": "https://mozharov.me",
+        "sameAs": [
+            "https://x.com/mozharovlad",
+            "https://t.me/mozharovv",
+            "https://youtube.com/@mozharov"
+        ],
+        "knowsAbout": ["Bitcoin", "Lightning Network", "Cryptocurrency", "Software Development"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ZapGram",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Telegram",
+        "description": "The simplest Bitcoin wallet in Telegram. Send and receive sats in chats, make instant payments worldwide through Lightning Network.",
+        "url": "https://t.me/zap_gram_bot",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id="squares-background" role="presentation"></div>
+    <header class="main-header">
+        <h2 class="header-title"><a href="https://x.com/mozharovlad" target="_blank" rel="noopener">MOZHAROV</a></h2>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title" class="fade-in">Services for Sovereign Individuals</h1>
+            <a href="#content" class="btn fade-in delay-2" aria-label="See available projects">
+                See Projects
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="margin-left: 2px; transform: translateY(0.25rem);" aria-hidden="true">
+                    <path d="M12 4L12 20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </section>
+
+        <div id="content" class="content">
+            <nav class="social-links" aria-label="Social media links">
+                <a href="https://x.com/mozharovlad" class="social-link" target="_blank" rel="noopener"
+                    aria-label="Follow on X (Twitter)">
+                    <svg class="social-icon" viewBox="0 0 30 30" aria-hidden="true">
+                        <path
+                            d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://t.me/mozharovv" class="social-link" target="_blank" rel="noopener"
+                    aria-label="Join Telegram channel">
+                    <svg class="social-icon" viewBox="0 0 48 48" aria-hidden="true">
+                        <path
+                            d="M5.83,23.616c12.568-5.529,28.832-12.27,31.077-13.203c5.889-2.442,7.696-1.974,6.795,3.434 c-0.647,3.887-2.514,16.756-4.002,24.766c-0.883,4.75-2.864,5.313-5.979,3.258c-1.498-0.989-9.059-5.989-10.7-7.163 c-1.498-1.07-3.564-2.357-0.973-4.892c0.922-0.903,6.966-6.674,11.675-11.166c0.617-0.59-0.158-1.559-0.87-1.086 c-6.347,4.209-15.147,10.051-16.267,10.812c-1.692,1.149-3.317,1.676-6.234,0.838c-2.204-0.633-4.357-1.388-5.195-1.676 C1.93,26.43,2.696,24.995,5.83,23.616z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://youtube.com/@mozharov" class="social-link" target="_blank" rel="noopener"
+                    aria-label="Subscribe on YouTube">
+                    <svg class="social-icon" viewBox="0 0 50 50" aria-hidden="true">
+                        <path
+                            d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://nosta.me/npub1d8wz99m0m0jz049xverxegx54n9ywlqt9fzy4h90epx03nfu20aqjvs5af"
+                    class="social-link" target="_blank" rel="noopener" aria-label="Connect on Nostr">
+                    <svg class="social-icon" viewBox="0 0 875 875" aria-hidden="true">
+                        <path
+                            d="m684.72,485.57c.22,12.59-11.93,51.47-38.67,81.3-26.74,29.83-56.02,20.85-58.42,20.16s-3.09-4.46-7.89-3.77-9.6,6.17-18.86,7.2-17.49,1.71-26.06-1.37c-4.46.69-5.14.71-7.2,2.24s-17.83,10.79-21.6,11.47c0,7.2-1.37,44.57,0,55.89s3.77,25.71,7.54,36c3.77,10.29,2.74,10.63,7.54,9.94s13.37.34,15.77,4.11c2.4,3.77,1.37,6.51,5.49,8.23s60.69,17.14,99.43,19.2c26.74.69,42.86,2.74,52.12,19.54,1.37,7.89,7.54,13.03,11.31,14.06s8.23,2.06,12,5.83,1.03,8.23,5.49,11.66c4.46,3.43,14.74,8.57,25.37,13.71,10.63,5.14,15.09,13.37,15.77,16.11s1.71,10.97,1.71,10.97c0,0-8.91,0-10.97-2.06s-2.74-5.83-2.74-5.83c0,0-6.17,1.03-7.54,3.43s.69,2.74-7.89.69-11.66-3.77-18.17-8.57c-6.51-4.8-16.46-17.14-25.03-16.8,4.11,8.23,5.83,8.23,10.63,10.97s8.23,5.83,8.23,5.83l-7.2,4.46s-4.46,2.06-14.74-.69-11.66-4.46-12.69-10.63,0-9.26-2.74-14.4-4.11-15.77-22.29-21.26c-18.17-5.49-66.52-21.26-100.12-24.69s-22.63-2.74-28.11-1.37-15.77,4.46-26.4-1.37c-10.63-5.83-16.8-13.71-17.49-20.23s-1.71-10.97,0-19.2,3.43-19.89,1.71-26.74-14.06-55.89-19.89-64.12c-13.03,1.03-50.74-.69-50.74-.69,0,0-2.4-.69-17.49,5.83s-36.48,13.76-46.77,19.93-14.4,9.7-16.12,13.13c.12,3-1.23,7.72-2.79,9.06s-12.48,2.42-12.48,2.42c0,0-5.85,5.86-8.25,9.97-6.86,9.6-55.2,125.14-66.52,149.83-13.54,32.57-9.77,27.43-37.71,27.43s-8.06.3-8.06.3c0,0-12.34,5.88-16.8,5.88s-18.86-2.4-26.4,0-16.46,9.26-23.31,10.29-4.95-1.34-8.38-3.74c-4-.21-14.27-.12-14.27-.12,0,0,1.74-6.51,7.91-10.88,8.23-5.83,25.37-16.11,34.63-21.26s17.49-7.89,23.31-9.26,18.51-6.17,30.51-9.94,19.54-8.23,29.83-31.54c10.29-23.31,50.4-111.43,51.43-116.23.63-2.96,3.73-6.48,4.8-15.09.66-5.35-2.49-13.04,1.71-22.63,10.97-25.03,21.6-20.23,26.4-20.23s17.14.34,26.4-1.37,15.43-2.74,24.69-7.89,11.31-8.91,11.31-8.91l-19.89-3.43s-18.51.69-25.03-4.46-15.43-15.77-15.43-15.77l-7.54-7.2,1.03,8.57s-5.14-8.91-6.51-10.29-8.57-6.51-11.31-11.31-7.54-25.03-7.54-25.03l-6.17,13.03-1.71-18.86-5.14,7.2-2.74-16.11-4.8,8.23-3.43-14.4-5.83,4.46-2.4-10.29-5.83-3.43s-14.06-9.26-16.46-9.6-4.46,3.43-4.46,3.43l1.37,12-12.2-6.27-7-11.9s2.36,4.01-9.62,7.53c-20.55,0-21.89-2.28-24.93-3.94-1.31-6.56-5.57-10.11-5.57-10.11h-20.57l-.34-6.86-7.89,3.09.69-10.29h-14.06l1.03-11.31h-8.91s3.09-9.26,25.71-22.97,25.03-16.46,46.29-17.14c21.26-.69,32.91,2.74,46.29,8.23s38.74,13.71,43.89,17.49c11.31-9.94,28.46-19.89,34.29-19.89,1.03-2.4,6.19-12.33,17.96-17.6,35.31-15.81,108.13-34,131.53-35.54,31.2-2.06,7.89-1.37,39.09,2.06,31.2,3.43,54.17,7.54,69.6,12.69,12.58,4.19,25.03,9.6,34.29,2.06,4.33-1.81,11.81-1.34,17.83-5.14,30.69-25.09,34.72-32.35,43.63-41.95s20.14-24.91,22.54-45.14,4.46-58.29-10.63-88.12-28.8-45.26-34.63-69.26c-5.83-24-8.23-61.03-6.17-73.03,2.06-12,5.14-22.29,6.86-30.51s9.94-14.74,19.89-16.46c9.94-1.71,17.83,1.37,22.29,4.8,4.46,3.43,11.65,6.28,13.37,10.29.34,1.71-1.37,6.51,8.23,8.23,9.6,1.71,16.05,4.16,16.05,4.16,0,0,15.64,4.29,3.11,7.73-12.69,2.06-20.52-.71-24.29,1.69s-7.21,10.08-9.61,11.1-7.2.34-12,4.11-9.6,6.86-12.69,14.4-5.49,15.77-3.43,26.74,8.57,31.54,14.4,43.2c5.83,11.66,20.23,40.8,24.34,47.66s15.77,29.49,16.8,53.83,1.03,44.23,0,54.86-10.84,51.65-35.53,85.94c-8.16,14.14-23.21,31.9-24.67,35.03-1.45,3.13-3.02,4.88-1.61,7.65,4.62,9.05,12.87,22.13,14.71,29.22,2.29,6.64,6.99,16.13,7.22,28.72Z">
+                        </path>
+                    </svg>
+                </a>
+            </nav>
+
+            <section class="projects" aria-labelledby="projects-title">
+                <h2 id="projects-title" class="visually-hidden">Projects</h2>
+                <article class="project">
+                    <div class="project-content">
+                        <a href="https://t.me/zap_gram_bot" target="_blank" rel="noopener" class="project-header">
+                            <img src="assets/zapgram-logo.jpg" alt="ZapGram Logo" class="project-logo" width="48"
+                                height="48">
+                            <h3>ZapGram</h3>
+                        </a>
+                        <ul>
+                            <li>The simplest Bitcoin wallet in <a href="https://telegram.org" target="_blank"
+                                    rel="noopener">Telegram</a>.</li>
+                            <li>Send and receive sats in Telegram chats.</li>
+                            <li>Pay and accept payments worldwide through Lightning Network.</li>
+                            <li>Transfers are free and instant, just like messages.</li>
+                        </ul>
+                        <a href="https://t.me/zap_gram_bot" target="_blank" rel="noopener" class="project-link">
+                            <span>Open ZapGram</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </section>
+
+            <section id="donations" class="donations" aria-labelledby="donations-title">
+                <h2 id="donations-title" class="donations-title">Support the development</h2>
+                <div class="donation-methods">
+                    <div class="donation-method">
+                        <div class="donation-header">
+                            <svg class="donation-icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.974.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z" />
+                            </svg>
+                            <h3>Bitcoin</h3>
+                        </div>
+                        <div class="donation-content">
+                            <div class="donation-address" id="btc-address">
+                                <span>bc1pq6ch07lnqeg8geysxyctngm9y8mk4jea0s5xaypxdp7jrqls06ms5cr0uw</span>
+                                <button class="copy-btn" onclick="copyToClipboard('btc-address')">
+                                    <svg viewBox="0 0 24 24" class="copy-icon">
+                                        <path
+                                            d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                                    </svg>
+                                </button>
+                                <button class="qr-btn" onclick="showQR('btc-address')">
+                                    <svg viewBox="0 0 24 24" class="qr-icon">
+                                        <path
+                                            d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 13h2v2h-2zM15 15h2v2h-2zM13 17h2v2h-2zM17 17h2v2h-2zM19 19h2v2h-2zM15 19h2v2h-2zM17 13h2v2h-2zM19 15h2v2h-2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="donation-method">
+                        <div class="donation-header">
+                            <svg class="donation-icon" viewBox="0 0 282 282">
+                                <circle cx="140.983" cy="141.003" r="141" fill="currentColor" />
+                                <path
+                                    d="M79.7609 144.047L173.761 63.0466C177.857 60.4235 181.761 63.0466 179.261 67.5466L149.261 126.547H202.761C202.761 126.547 211.261 126.547 202.761 133.547L110.261 215.047C103.761 220.547 99.261 217.547 103.761 209.047L132.761 151.547H79.7609C79.7609 151.547 71.2609 151.547 79.7609 144.047Z"
+                                    fill="#212121" />
+                            </svg>
+                            <h3>Lightning</h3>
+                        </div>
+                        <div class="donation-content">
+                            <a href="https://getalby.com/p/mozharov" target="_blank" rel="noopener"
+                                class="ln-donate-btn">
+                                <span>Donate</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="modal" id="qr-modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal(event)">&times;</span>
+            <div id="qr-code"></div>
+            <div id="qr-address" class="qr-address"></div>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.querySelector('span').textContent;
+            navigator.clipboard.writeText(text);
+
+            const button = element.querySelector('.copy-btn');
+            button.classList.add('copied');
+            setTimeout(() => button.classList.remove('copied'), 1000);
+        }
+
+        function showQR(elementId) {
+            const modal = document.getElementById('qr-modal');
+            const qrContainer = document.getElementById('qr-code');
+            const qrAddress = document.getElementById('qr-address');
+            const text = document.getElementById(elementId).querySelector('span').textContent;
+
+            qrContainer.innerHTML = '';
+
+            new QRCode(qrContainer, {
+                text: text,
+                width: 256,
+                height: 256,
+                colorDark: "#FFFFFF",
+                colorLight: "#00000000",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            qrAddress.textContent = text;
+
+            modal.style.display = 'flex';
+            modal.offsetHeight;
+            modal.classList.add('show');
+        }
+
+        function closeModal(event) {
+            if (event.target.id === 'qr-modal' || event.target.classList.contains('close-modal')) {
+                const modal = document.getElementById('qr-modal');
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                const modal = document.getElementById('qr-modal');
+                if (modal.style.display === 'flex') {
+                    closeModal({ target: modal });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
